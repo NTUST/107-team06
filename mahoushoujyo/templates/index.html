@@ -1,0 +1,52 @@
+{% load static %}
+<html>
+<head>
+	<title>魔法少女サイト</title>
+	<link rel=stylesheet type="text/css" href="{%static 'css/index.css' %}">
+	<link rel=stylesheet type="text/css" href="{%static 'css/animate.css' %}">
+</head>
+<body>
+	
+	<div id="wrapper">
+		<div id="header" style="height:10vh"></div>
+		<div id="div1">
+			<img src="{% static 'img/1.jpg' %}" width="100%">
+		</div>
+		<div id="div2">
+			<img src="{% static 'img/2.jpg' %}" width="100%">
+		</div>
+		<div id="wing">
+			<div id="right">
+				<img src="{% static 'img/rightb.png' %}" id="rblack">
+				<img src="{% static 'img/right.png' %}" id="rightw" class>
+				
+			</div>
+			<div id="left">
+				<img src="{% static 'img/leftb.png' %}" id="lblack">
+				<img src="{% static 'img/left.png' %}" id="leftw" class>
+				
+			</div>
+		</div>
+		<div id="div3">
+			<img src="{% static 'img/3.jpg' %}" width="100%">
+		</div>
+		<div id="button" >
+			<img src="{% static 'img/regi.png' %}" id="regi">
+			<img src="{% static 'img/enter.png' %}" id="enter">
+			
+		</div>
+	</div>
+	<script type="text/javascript" src="{%static 'js/jquery.js' %}"></script>
+	<script type="text/javascript" src="{%static 'js/index.js' %}"></script>
+	<script type="text/javascript">
+		var audio = document.createElement("audio");
+		audio.autoplay = true;
+		audio.load();
+		audio.addEventListener("load",function(){
+		audio.currentTime = 0;
+		audio.play();
+		},true);
+		audio.src = "{%static 'music/index.mp3' %}";
+	</script>
+</body>
+</html>
